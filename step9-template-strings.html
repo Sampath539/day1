@@ -42,13 +42,42 @@
     };
 
     function batfun(){
-        document.getElementById("box").innerHTML = 
+        document.getElementById("container").innerHTML += `
+        <div class="box">
+            <h1>Batman</h1>
+            <h2>Brcue Wayne</h2>
+            <img src="images/batman.jpg" alt="Batman">
+            <input type="range" min="0" max="10" value="7">
+            <h2>Gotham</h2>
+        </div>`
+    }
+    function superfun(){
+        document.getElementById("container").innerHTML += `
+        <div class="box">
+            <h1>Superman</h1>
+            <h2>Clark Kent</h2>
+            <img src="images/superman.jpg" alt="Superman">
+            <input type="range" min="0" max="10" value="9">
+            <h2>Gotham</h2>
+        </div>`
+    }
+    function spiderfun(){
+        document.getElementById("container").innerHTML += `
+        <div class="box">
+            <h1>Spiderman</h1>
+            <h2>Peter Parker</h2>
+            <img src="images/spiderman.jpg" alt="Spiderman">
+            <input type="range" min="0" max="10" value="6">
+            <h2>Gotham</h2>
+        </div>`
     }
     </script>
     <style>
         .box{
             width: 200px;
             border : 1px solid gray;
+            float: left;
+            margin-left: 10px;
         }
         .box h1,h2{
             text-align: center;
@@ -76,12 +105,13 @@
     <button>Superman</button>
     <button>Spiderman</button>
     <hr>
-    <div class="box">
+    <div id="container"></div>
+    <!--div class="box">
         <h1>Batman</h1>
         <h2>Brcue Wayne</h2>
         <img src="images/batman.jpg" alt="Batman">
         <input type="range" min="0" max="10" value="7">
         <h2>Gotham</h2>
-    </div>
+    </div-->
 </body>
 </html>
