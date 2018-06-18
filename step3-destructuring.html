@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+    <script>
+        /*
+        let hero = {
+            title : "Batman",
+            power : 7
+        };
+        let comichero = hero.title;
+        window.onload = function(){
+            let elm = document.getElementsByTagName("h1")[0]
+            elm.innerHTML += comichero+"<br/>"
+            elm.innerHTML += hero.title+"<br/>"
+            comichero = "Joker";
+            elm.innerHTML += comichero+"<br/>"
+            elm.innerHTML += hero.title+"<br/>"
+        }
+        */
+       let hero = {
+           title : "Batman",
+           power : 7
+       };
+       /*
+       let hp = hero.power,
+       ht = hero.title;
+      */
+       // let { title: herotitle, power: heropower } = hero;
+       let { title , power } = hero;
+       window.onload = function(){
+            let elm = document.getElementsByTagName("h1")[0]
+            elm.innerHTML += title+"<br>"
+            elm.innerHTML += power+"<br>"
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

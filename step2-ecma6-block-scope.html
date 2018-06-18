@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block Scope</title>
+    <script>
+        // let and const
+        let user = {
+            title : "",
+            registered : false
+        };
+        function checkuser(){
+            if(!user.registered){
+                let temptitle = "Hello Guest";
+                user.title = temptitle;
+            }
+           //  console.log(temptitle);
+        };
+        checkuser();
+        console.log(user.title);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

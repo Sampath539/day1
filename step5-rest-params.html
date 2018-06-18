@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest Arguments</title>
+    <script>
+        /* ES5
+        function adder(){
+            var tot = 0;
+            for( var i = 0; i < arguments.length; i++){
+                tot += arguments[i];
+            };
+            return tot;
+        };
+        */
+       // ES6
+        function adder(...nums){
+            var tot = 0;
+            for( var i = 0; i < nums.length; i++){
+                tot += nums[i];
+            };
+            return tot;
+        };
+        console.log( adder(1) );
+        console.log( adder(1,2) );
+        console.log( adder(1,2,3) );
+        console.log( adder(1,2,3,4) );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
