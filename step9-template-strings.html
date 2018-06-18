@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template Strings</title>
+    <!--
+        www.github.com/vscodes
+    -->
     <script>
         var herolist = [
             {
@@ -12,31 +15,73 @@
             fname : "Bruce",
             lname : "Wayne",
             power : 7,
+            poster : "images/batman.jpg",
             city : "Gotham"
         },
-            {
+        {
             title : "Superman",
             fname : "Clark",
             lname : "Kent",
             power : 8,
+            poster : "images/superman.jpg",
             city : "Metropolis"
         },
-            {
+        {
             title : "Spiderman",
             fname : "Peter",
             lname : "Parker",
             power : 6,
+            poster : "images/spiderman.jpg",
             city : "New York"
         },
     ];
+    window.onload = function(){
+        document.getElementsByTagName("button")[0].addEventListener("click", batfun)
+        document.getElementsByTagName("button")[1].addEventListener("click", superfun)
+        document.getElementsByTagName("button")[2].addEventListener("click", spiderfun)
+    };
 
+    function batfun(){
+        document.getElementById("box").innerHTML = 
+    }
     </script>
+    <style>
+        .box{
+            width: 200px;
+            border : 1px solid gray;
+        }
+        .box h1,h2{
+            text-align: center;
+            font-family: 'Trebuchet MS';
+            margin: 0px;
+        }
+        .box h1 {
+            font-size: 30px;
+            background-color: burlywood;
+        }
+        .box h2 {
+            font-size: 20px;
+        }
+        .box img{
+            width: 100%;
+        }
+        .box input{
+            width: 98%;
+            display: inline-block
+        }
+    </style>
 </head>
 <body>
     <button>Batman</button>
     <button>Superman</button>
     <button>Spiderman</button>
     <hr>
-    <div class="box"></div>
+    <div class="box">
+        <h1>Batman</h1>
+        <h2>Brcue Wayne</h2>
+        <img src="images/batman.jpg" alt="Batman">
+        <input type="range" min="0" max="10" value="7">
+        <h2>Gotham</h2>
+    </div>
 </body>
 </html>
