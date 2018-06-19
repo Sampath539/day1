@@ -1,0 +1,1 @@
+window.onload = () => document.body.innerHTML = `<h1>${ message.toUpperCase() }</h1>`;

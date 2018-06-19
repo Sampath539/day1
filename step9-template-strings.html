@@ -34,43 +34,41 @@
             poster : "images/spiderman.jpg",
             city : "New York"
         },
+        {
+            title : "Rajani",
+            fname : "Rajani",
+            lname : "kanth",
+            power : 10,
+            poster : "images/rajani.jpg",
+            city : "Chennai"
+        },
     ];
+
     window.onload = function(){
-        document.getElementsByTagName("button")[0].addEventListener("click", batfun)
-        document.getElementsByTagName("button")[1].addEventListener("click", superfun)
-        document.getElementsByTagName("button")[2].addEventListener("click", spiderfun)
+        let buttons = document.getElementsByTagName("button");
+        for(let i = 0 ; i < buttons.length; i++){
+            buttons[i].addEventListener("click", herofun )
+        }
     };
 
-    function batfun(){
-        document.getElementById("container").innerHTML += `
-        <div class="box">
-            <h1>Batman</h1>
-            <h2>Brcue Wayne</h2>
-            <img src="images/batman.jpg" alt="Batman">
-            <input type="range" min="0" max="10" value="7">
-            <h2>Gotham</h2>
-        </div>`
+    function herofun(evt){
+        for(let i = 0 ; i < herolist.length; i++){
+            if(herolist[i].title === evt.target.innerHTML){
+                console.log(herolist[i].title," was found");
+                document.getElementById("container").innerHTML += `
+                <div class="box">
+                    <h1>${herolist[i].title}</h1>
+                    <h2>${herolist[i].fname+' '+herolist[i].lname}</h2>
+                    <img src="${herolist[i].poster}" alt="${herolist[i].title}">
+                    <input type="range" min="0" max="10" value="${herolist[i].power}">
+                    <h2>${herolist[i].city}</h2>
+                </div>`
+                break
+                };
+        }
+        
     }
-    function superfun(){
-        document.getElementById("container").innerHTML += `
-        <div class="box">
-            <h1>Superman</h1>
-            <h2>Clark Kent</h2>
-            <img src="images/superman.jpg" alt="Superman">
-            <input type="range" min="0" max="10" value="9">
-            <h2>Gotham</h2>
-        </div>`
-    }
-    function spiderfun(){
-        document.getElementById("container").innerHTML += `
-        <div class="box">
-            <h1>Spiderman</h1>
-            <h2>Peter Parker</h2>
-            <img src="images/spiderman.jpg" alt="Spiderman">
-            <input type="range" min="0" max="10" value="6">
-            <h2>Gotham</h2>
-        </div>`
-    }
+    
     </script>
     <style>
         .box{
@@ -104,6 +102,7 @@
     <button>Batman</button>
     <button>Superman</button>
     <button>Spiderman</button>
+    <button>Rajani</button>
     <hr>
     <div id="container"></div>
     <!--div class="box">
